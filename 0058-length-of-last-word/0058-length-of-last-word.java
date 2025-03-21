@@ -15,8 +15,5 @@ class Solution {
         return length;
     }
 
-    public static void main(String[] args) {
-        Solution sol = new Solution();
-        System.out.println(sol.lengthOfLastWord("Hello World")); 
-    }
+    
 }
