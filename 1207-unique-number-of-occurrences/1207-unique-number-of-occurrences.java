@@ -4,10 +4,12 @@ class Solution {
         for (int num : arr) {
             count[num + 1000]++;
         }
-        Arrays.sort(count);
-        for (int i = 1; i < 2001; i++) {
-            if (count[i] != 0 && count[i] == count[i - 1]) {
-                return false;
+
+        boolean[] freq = new boolean[1001];
+        for (int c : count) {
+            if (c > 0) {
+                if (freq[c]) return false;
+                freq[c] = true;
             }
         }
         return true;
